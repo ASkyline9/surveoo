@@ -10,9 +10,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #FF6600;
-            --primary-light: #FF8C00;
-            --secondary: #6236FF;
+            --primary: #6236FF;
+            --primary-light: #7a52ff;
+            --secondary: #FF8C00;
             --accent: #FFD166;
             --dark: #1A1A2E;
             --light: #F8F9FA;
@@ -32,7 +32,7 @@
             font-family: 'Inter', sans-serif;
             color: var(--text);
             line-height: 1.6;
-            background: linear-gradient(135deg, #fff5eb 0%, #ffeada 100%);
+            background: linear-gradient(135deg, #f5f7ff 0%, #f0f2ff 100%);
             min-height: 100vh;
             overflow-x: hidden;
         }
@@ -60,18 +60,31 @@
             align-items: center;
         }
         
-        .logo {
-            font-size: 28px;
-            font-weight: 800;
-            color: white;
-            text-decoration: none;
+        .logo-container {
             display: flex;
             align-items: center;
         }
         
-        .logo span {
-            color: var(--accent);
-            margin-left: 4px;
+        /* CSS-based logo */
+        .surveoo-logo {
+            display: flex;
+            flex-direction: column;
+            color: white;
+            font-weight: 800;
+            line-height: 1;
+        }
+        
+        .logo-main {
+            font-size: 28px;
+            letter-spacing: 1px;
+        }
+        
+        .logo-tagline {
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            opacity: 0.9;
+            margin-top: 4px;
         }
         
         .cta-button {
@@ -83,25 +96,25 @@
             text-decoration: none;
             transition: all 0.3s ease;
             display: inline-block;
-            box-shadow: 0 4px 15px rgba(98, 54, 255, 0.25);
+            box-shadow: 0 4px 15px rgba(255, 140, 0, 0.25);
             animation: pulse 2s infinite;
         }
         
         .cta-button:hover {
-            background-color: #4f29d6;
+            background-color: #e67e00;
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(98, 54, 255, 0.4);
+            box-shadow: 0 6px 20px rgba(255, 140, 0, 0.4);
         }
         
         @keyframes pulse {
             0% {
-                box-shadow: 0 0 0 0 rgba(98, 54, 255, 0.5);
+                box-shadow: 0 0 0 0 rgba(255, 140, 0, 0.5);
             }
             70% {
-                box-shadow: 0 0 0 10px rgba(98, 54, 255, 0);
+                box-shadow: 0 0 0 10px rgba(255, 140, 0, 0);
             }
             100% {
-                box-shadow: 0 0 0 0 rgba(98, 54, 255, 0);
+                box-shadow: 0 0 0 0 rgba(255, 140, 0, 0);
             }
         }
         
@@ -120,7 +133,7 @@
             width: 600px;
             height: 600px;
             border-radius: 50%;
-            background: linear-gradient(135deg, rgba(255, 102, 0, 0.1) 0%, rgba(255, 140, 0, 0.1) 100%);
+            background: linear-gradient(135deg, rgba(98, 54, 255, 0.1) 0%, rgba(122, 82, 255, 0.1) 100%);
             z-index: -1;
         }
         
@@ -132,7 +145,7 @@
             width: 500px;
             height: 500px;
             border-radius: 50%;
-            background: linear-gradient(135deg, rgba(255, 209, 102, 0.1) 0%, rgba(255, 230, 179, 0.1) 100%);
+            background: linear-gradient(135deg, rgba(255, 140, 0, 0.1) 0%, rgba(255, 209, 102, 0.1) 100%);
             z-index: -1;
         }
         
@@ -225,7 +238,7 @@
             justify-content: center;
             color: white;
             font-size: 24px;
-            box-shadow: 0 5px 15px rgba(255, 102, 0, 0.2);
+            box-shadow: 0 5px 15px rgba(98, 54, 255, 0.2);
         }
         
         .reward-name {
@@ -250,12 +263,12 @@
             text-decoration: none;
             transition: all 0.3s ease;
             display: inline-block;
-            box-shadow: 0 5px 15px rgba(255, 102, 0, 0.3);
+            box-shadow: 0 5px 15px rgba(98, 54, 255, 0.3);
         }
         
         .primary-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(255, 102, 0, 0.4);
+            box-shadow: 0 8px 25px rgba(98, 54, 255, 0.4);
         }
         
         /* How It Works */
@@ -337,7 +350,7 @@
             font-size: 36px;
             font-weight: 700;
             margin: 0 auto 25px;
-            border: 6px solid #fff5eb;
+            border: 6px solid var(--light);
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             transition: all 0.3s ease;
         }
@@ -367,7 +380,7 @@
         /* Testimonials */
         .testimonials {
             padding: 80px 0;
-            background: linear-gradient(135deg, rgba(255, 102, 0, 0.05) 0%, rgba(255, 140, 0, 0.05) 100%);
+            background: linear-gradient(135deg, rgba(98, 54, 255, 0.05) 0%, rgba(122, 82, 255, 0.05) 100%);
         }
         
         .testimonial-grid {
@@ -433,6 +446,106 @@
         .author-title {
             font-size: 0.9rem;
             color: var(--text-light);
+        }
+        
+        /* Book Recommendation Section */
+        .book-recommendation {
+            padding: 80px 0;
+            background: linear-gradient(135deg, rgba(255, 140, 0, 0.05) 0%, rgba(255, 209, 102, 0.05) 100%);
+        }
+        
+        .book-container {
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: var(--box-shadow);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .book-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, var(--secondary), var(--accent));
+        }
+        
+        .book-icon {
+            font-size: 48px;
+            color: var(--secondary);
+            margin-bottom: 20px;
+        }
+        
+        .book-title {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            color: var(--dark);
+            line-height: 1.2;
+        }
+        
+        .book-author {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 25px;
+            font-style: italic;
+        }
+        
+        .book-description {
+            font-size: 1.1rem;
+            color: var(--text);
+            margin-bottom: 30px;
+            max-width: 700px;
+            line-height: 1.6;
+        }
+        
+        .book-benefits {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 35px;
+            max-width: 800px;
+        }
+        
+        .book-benefit {
+            background: rgba(255, 140, 0, 0.1);
+            color: var(--secondary);
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .book-benefit i {
+            color: var(--secondary);
+        }
+        
+        .book-cta {
+            background: linear-gradient(135deg, var(--secondary) 0%, #FF9E40 100%);
+            color: white;
+            padding: 16px 40px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+            box-shadow: 0 5px 20px rgba(255, 140, 0, 0.3);
+            font-size: 1.1rem;
+        }
+        
+        .book-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 140, 0, 0.4);
+            background: linear-gradient(135deg, #e67e00 0%, #FF8C00 100%);
         }
         
         /* FAQ Section */
@@ -577,6 +690,27 @@
                 height: 80px;
                 font-size: 28px;
             }
+            
+            .logo-main {
+                font-size: 24px;
+            }
+            
+            .logo-tagline {
+                font-size: 10px;
+            }
+            
+            .book-container {
+                padding: 30px 20px;
+            }
+            
+            .book-title {
+                font-size: 1.8rem;
+            }
+            
+            .book-benefits {
+                flex-direction: column;
+                align-items: center;
+            }
         }
         
         @media (max-width: 576px) {
@@ -591,6 +725,27 @@
             
             .section-title h2 {
                 font-size: 2rem;
+            }
+            
+            .surveoo-logo {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .logo-main {
+                font-size: 20px;
+            }
+            
+            .logo-tagline {
+                font-size: 9px;
+            }
+            
+            .book-title {
+                font-size: 1.6rem;
+            }
+            
+            .book-description {
+                font-size: 1rem;
             }
         }
         
@@ -614,25 +769,31 @@
 </head>
 <body>
     <!-- Confetti elements -->
-    <div class="confetti" style="left: 5%; animation-delay: 0s; background: #FF3366;"></div>
-    <div class="confetti" style="left: 10%; animation-delay: 1s; background: #FF6600;"></div>
-    <div class="confetti" style="left: 15%; animation-delay: 2s; background: #FF3366;"></div>
-    <div class="confetti" style="left: 20%; animation-delay: 3s; background: #FF6600;"></div>
-    <div class="confetti" style="left: 25%; animation-delay: 4s; background: #FF3366;"></div>
-    <div class="confetti" style="left: 30%; animation-delay: 0.5s; background: #FF6600;"></div>
-    <div class="confetti" style="left: 40%; animation-delay: 1.5s; background: #FF3366;"></div>
-    <div class="confetti" style="left: 50%; animation-delay: 2.5s; background: #FF6600;"></div>
-    <div class="confetti" style="left: 60%; animation-delay: 3.5s; background: #FF3366;"></div>
-    <div class="confetti" style="left: 70%; animation-delay: 4.5s; background: #FF6600;"></div>
-    <div class="confetti" style="left: 80%; animation-delay: 1s; background: #FF3366;"></div>
-    <div class="confetti" style="left: 90%; animation-delay: 2s; background: #FF6600;"></div>
-    <div class="confetti" style="left: 95%; animation-delay: 3s; background: #FF3366;"></div>
+    <div class="confetti" style="left: 5%; animation-delay: 0s; background: #7a52ff;"></div>
+    <div class="confetti" style="left: 10%; animation-delay: 1s; background: #6236FF;"></div>
+    <div class="confetti" style="left: 15%; animation-delay: 2s; background: #7a52ff;"></div>
+    <div class="confetti" style="left: 20%; animation-delay: 3s; background: #6236FF;"></div>
+    <div class="confetti" style="left: 25%; animation-delay: 4s; background: #7a52ff;"></div>
+    <div class="confetti" style="left: 30%; animation-delay: 0.5s; background: #6236FF;"></div>
+    <div class="confetti" style="left: 40%; animation-delay: 1.5s; background: #7a52ff;"></div>
+    <div class="confetti" style="left: 50%; animation-delay: 2.5s; background: #6236FF;"></div>
+    <div class="confetti" style="left: 60%; animation-delay: 3.5s; background: #7a52ff;"></div>
+    <div class="confetti" style="left: 70%; animation-delay: 4.5s; background: #6236FF;"></div>
+    <div class="confetti" style="left: 80%; animation-delay: 1s; background: #7a52ff;"></div>
+    <div class="confetti" style="left: 90%; animation-delay: 2s; background: #6236FF;"></div>
+    <div class="confetti" style="left: 95%; animation-delay: 3s; background: #7a52ff;"></div>
 
     <!-- Header -->
     <header>
         <div class="container">
             <div class="header-content">
-                <a href="#" class="logo">Surve<span>oo</span></a>
+                <div class="logo-container">
+                    <!-- CSS-based Surveoo logo -->
+                    <div class="surveoo-logo">
+                        <div class="logo-main">Surveoo</div>
+                        <div class="logo-tagline">No. 1 Paid Survey</div>
+                    </div>
+                </div>
                 <a href="https://www.surveoo.com/?r=96631" class="cta-button">Join Now</a>
             </div>
         </div>
@@ -750,6 +911,39 @@
         </div>
     </section>
 
+    <!-- Book Recommendation Section -->
+    <section class="book-recommendation">
+        <div class="container">
+            <div class="book-container">
+                <div class="book-icon">
+                    <i class="fas fa-book"></i>
+                </div>
+                <h2 class="book-title">How to Get Rich and Stay Rich</h2>
+                <p class="book-author">by Robert T. Kiyosaki</p>
+                <p class="book-description">Discover the secrets to building lasting wealth from the bestselling author of <em>Rich Dad Poor Dad</em>. This powerful book reveals the mindset shifts and practical strategies needed to achieve financial freedom and create a legacy that lasts generations.</p>
+                
+                <div class="book-benefits">
+                    <div class="book-benefit">
+                        <i class="fas fa-check-circle"></i> Learn wealth-building principles
+                    </div>
+                    <div class="book-benefit">
+                        <i class="fas fa-check-circle"></i> Master money management
+                    </div>
+                    <div class="book-benefit">
+                        <i class="fas fa-check-circle"></i> Create multiple income streams
+                    </div>
+                    <div class="book-benefit">
+                        <i class="fas fa-check-circle"></i> Develop a millionaire mindset
+                    </div>
+                </div>
+                
+                <a href="https://s.shopee.com.my/7ATsCMqEZL" class="book-cta">
+                    <i class="fas fa-shopping-cart"></i> Get Your Copy on Shopee Now
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- FAQ Section -->
     <section class="faq">
         <div class="container">
@@ -821,7 +1015,7 @@
         document.addEventListener('DOMContentLoaded', function() {
             const confettiContainer = document.body;
             const confettiCount = 30;
-            const colors = ['#FF3366', '#FF6600', '#FF9933', '#FFCC00'];
+            const colors = ['#6236FF', '#7a52ff', '#9e86ff', '#c2b5ff'];
             
             for (let i = 0; i < confettiCount; i++) {
                 const confetti = document.createElement('div');
