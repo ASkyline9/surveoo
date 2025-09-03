@@ -10,9 +10,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #6236FF;
-            --primary-light: #7a52ff;
-            --secondary: #FF8C00;
+            --primary: #FF6600;
+            --primary-light: #FF8C00;
+            --secondary: #6236FF;
             --accent: #FFD166;
             --dark: #1A1A2E;
             --light: #F8F9FA;
@@ -32,7 +32,7 @@
             font-family: 'Inter', sans-serif;
             color: var(--text);
             line-height: 1.6;
-            background: linear-gradient(135deg, #f5f7ff 0%, #f0f2ff 100%);
+            background: linear-gradient(135deg, #fff5eb 0%, #ffeada 100%);
             min-height: 100vh;
             overflow-x: hidden;
         }
@@ -83,25 +83,25 @@
             text-decoration: none;
             transition: all 0.3s ease;
             display: inline-block;
-            box-shadow: 0 4px 15px rgba(255, 140, 0, 0.25);
+            box-shadow: 0 4px 15px rgba(98, 54, 255, 0.25);
             animation: pulse 2s infinite;
         }
         
         .cta-button:hover {
-            background-color: #e67e00;
+            background-color: #4f29d6;
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(255, 140, 0, 0.4);
+            box-shadow: 0 6px 20px rgba(98, 54, 255, 0.4);
         }
         
         @keyframes pulse {
             0% {
-                box-shadow: 0 0 0 0 rgba(255, 140, 0, 0.5);
+                box-shadow: 0 0 0 0 rgba(98, 54, 255, 0.5);
             }
             70% {
-                box-shadow: 0 0 0 10px rgba(255, 140, 0, 0);
+                box-shadow: 0 0 0 10px rgba(98, 54, 255, 0);
             }
             100% {
-                box-shadow: 0 0 0 0 rgba(255, 140, 0, 0);
+                box-shadow: 0 0 0 0 rgba(98, 54, 255, 0);
             }
         }
         
@@ -120,7 +120,7 @@
             width: 600px;
             height: 600px;
             border-radius: 50%;
-            background: linear-gradient(135deg, rgba(98, 54, 255, 0.1) 0%, rgba(122, 82, 255, 0.1) 100%);
+            background: linear-gradient(135deg, rgba(255, 102, 0, 0.1) 0%, rgba(255, 140, 0, 0.1) 100%);
             z-index: -1;
         }
         
@@ -132,7 +132,7 @@
             width: 500px;
             height: 500px;
             border-radius: 50%;
-            background: linear-gradient(135deg, rgba(255, 140, 0, 0.1) 0%, rgba(255, 209, 102, 0.1) 100%);
+            background: linear-gradient(135deg, rgba(255, 209, 102, 0.1) 0%, rgba(255, 230, 179, 0.1) 100%);
             z-index: -1;
         }
         
@@ -225,7 +225,7 @@
             justify-content: center;
             color: white;
             font-size: 24px;
-            box-shadow: 0 5px 15px rgba(98, 54, 255, 0.2);
+            box-shadow: 0 5px 15px rgba(255, 102, 0, 0.2);
         }
         
         .reward-name {
@@ -250,12 +250,12 @@
             text-decoration: none;
             transition: all 0.3s ease;
             display: inline-block;
-            box-shadow: 0 5px 15px rgba(98, 54, 255, 0.3);
+            box-shadow: 0 5px 15px rgba(255, 102, 0, 0.3);
         }
         
         .primary-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(98, 54, 255, 0.4);
+            box-shadow: 0 8px 25px rgba(255, 102, 0, 0.4);
         }
         
         /* How It Works */
@@ -337,7 +337,7 @@
             font-size: 36px;
             font-weight: 700;
             margin: 0 auto 25px;
-            border: 6px solid var(--light);
+            border: 6px solid #fff5eb;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             transition: all 0.3s ease;
         }
@@ -362,6 +362,122 @@
             text-align: center;
             margin-top: 40px;
             animation: fadeIn 1s ease-out 0.8s both;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 80px 0;
+            background: linear-gradient(135deg, rgba(255, 102, 0, 0.05) 0%, rgba(255, 140, 0, 0.05) 100%);
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .testimonial {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: var(--box-shadow);
+            transition: transform 0.3s ease;
+        }
+        
+        .testimonial:hover {
+            transform: translateY(-5px);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            color: var(--text);
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .testimonial-text::before {
+            content: """;
+            position: absolute;
+            left: 0;
+            top: -15px;
+            font-size: 60px;
+            color: var(--primary-light);
+            font-family: Arial, sans-serif;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+        
+        .author-name {
+            font-weight: 600;
+            color: var(--dark);
+        }
+        
+        .author-title {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+        
+        /* FAQ Section */
+        .faq {
+            padding: 80px 0;
+        }
+        
+        .faq-grid {
+            max-width: 800px;
+            margin: 50px auto 0;
+        }
+        
+        .faq-item {
+            margin-bottom: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+        }
+        
+        .faq-question {
+            background: white;
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+        
+        .faq-question:hover {
+            background: #f9f9f9;
+        }
+        
+        .faq-answer {
+            background: white;
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        
+        .faq-answer.open {
+            padding: 20px;
+            max-height: 200px;
         }
         
         /* Footer */
@@ -396,6 +512,26 @@
             display: block;
             margin-top: 10px;
             font-size: 0.9rem;
+        }
+        
+        /* Confetti */
+        .confetti {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            opacity: 0;
+            animation: confettiFall 5s infinite;
+        }
+        
+        @keyframes confettiFall {
+            0% {
+                opacity: 1;
+                transform: translateY(-100px) rotate(0deg);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(500px) rotate(720deg);
+            }
         }
         
         /* Responsive Design */
@@ -477,6 +613,21 @@
     </style>
 </head>
 <body>
+    <!-- Confetti elements -->
+    <div class="confetti" style="left: 5%; animation-delay: 0s; background: #FF3366;"></div>
+    <div class="confetti" style="left: 10%; animation-delay: 1s; background: #FF6600;"></div>
+    <div class="confetti" style="left: 15%; animation-delay: 2s; background: #FF3366;"></div>
+    <div class="confetti" style="left: 20%; animation-delay: 3s; background: #FF6600;"></div>
+    <div class="confetti" style="left: 25%; animation-delay: 4s; background: #FF3366;"></div>
+    <div class="confetti" style="left: 30%; animation-delay: 0.5s; background: #FF6600;"></div>
+    <div class="confetti" style="left: 40%; animation-delay: 1.5s; background: #FF3366;"></div>
+    <div class="confetti" style="left: 50%; animation-delay: 2.5s; background: #FF6600;"></div>
+    <div class="confetti" style="left: 60%; animation-delay: 3.5s; background: #FF3366;"></div>
+    <div class="confetti" style="left: 70%; animation-delay: 4.5s; background: #FF6600;"></div>
+    <div class="confetti" style="left: 80%; animation-delay: 1s; background: #FF3366;"></div>
+    <div class="confetti" style="left: 90%; animation-delay: 2s; background: #FF6600;"></div>
+    <div class="confetti" style="left: 95%; animation-delay: 3s; background: #FF3366;"></div>
+
     <!-- Header -->
     <header>
         <div class="container">
@@ -554,6 +705,90 @@
         </div>
     </section>
 
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Success Stories</h2>
+                <p>See what our users are saying about Surveoo</p>
+            </div>
+            
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <p class="testimonial-text">I've been using Surveoo for 3 months now and have earned over RM1200. It's perfect for some extra income during my free time.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SL</div>
+                        <div>
+                            <div class="author-name">Sarah Lim</div>
+                            <div class="author-title">Student</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial">
+                    <p class="testimonial-text">The surveys are interesting and pay well. I love that I can do them while waiting for appointments or during my commute.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AK</div>
+                        <div>
+                            <div class="author-name">Ahmad Khan</div>
+                            <div class="author-title">Freelancer</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial">
+                    <p class="testimonial-text">I was skeptical at first, but Surveoo actually pays! I've received my earnings through PayPal multiple times without any issues.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MJ</div>
+                        <div>
+                            <div class="author-name">Michelle Jong</div>
+                            <div class="author-title">Stay-at-home Mom</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+                <p>Everything you need to know about Surveoo</p>
+            </div>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How much can I earn with Surveoo? <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Earnings vary based on the number and type of surveys you complete. Most surveys pay between RM5 to RM37, with some high-value surveys paying even more.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How do I get paid? <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We offer multiple payment options including PayPal, Amazon vouchers, and direct bank transfer. You can request payment once you reach the minimum withdrawal amount.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Is Surveoo available worldwide? <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, Surveoo is available in most countries. However, survey availability may vary depending on your location and demographic profile.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -563,5 +798,40 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // FAQ functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                answer.classList.toggle('open');
+                
+                const icon = question.querySelector('i');
+                if (answer.classList.contains('open')) {
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up');
+                } else {
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down');
+                }
+            });
+        });
+        
+        // Create more confetti elements dynamically
+        document.addEventListener('DOMContentLoaded', function() {
+            const confettiContainer = document.body;
+            const confettiCount = 30;
+            const colors = ['#FF3366', '#FF6600', '#FF9933', '#FFCC00'];
+            
+            for (let i = 0; i < confettiCount; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                confetti.style.left = Math.random() * 100 + '%';
+                confetti.style.animationDelay = Math.random() * 5 + 's';
+                confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
+                confettiContainer.appendChild(confetti);
+            }
+        });
+    </script>
 </body>
 </html>
